@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SODDiagnoseViewController.h
 //  SounDoctor
 //
 //  Created by Yoshiyuki Kuga on 2015/01/28.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SODDiagnoseViewController : UIViewController
 
 
 @end

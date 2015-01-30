@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  SODDiagnoseViewController.m
 //  SounDoctor
 //
 //  Created by Yoshiyuki Kuga on 2015/01/28.
 //  Copyright (c) 2015年 SounDoctor. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SODDiagnoseViewController.h"
 
-@interface ViewController ()
+@interface SODDiagnoseViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SODDiagnoseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
