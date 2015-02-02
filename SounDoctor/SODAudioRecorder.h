@@ -9,21 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface SODAudioRecorder : NSObject
+@interface SODAudioRecorder : NSObject <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
+{
+    AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
+}
 
-@property (nonatomic, retain) AVAudioSession *session;
-@property (nonatomic, retain) AVAudioRecorder *recorder;
-@property (nonatomic, retain) AVAudioPlayer *player;
-@property (nonatomic, retain) NSArray *filePaths;
-@property (nonatomic, retain) NSString *documentDir;
-@property (nonatomic, retain) NSString *path;
-@property (nonatomic, retain) NSURL *recordingURL;
-
-- (void)startRecord;
-- (void)stopAudio:(id)sender;
-- (void)playAudioFile;
-- (void)openAudioFileWithUrl:(NSURL *)url;
-- (void)deleteAudioFileWithPath;
-- (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag;
+- (void)startRecord:(id)sender;
+- (void)play:(id)sender;
 
 @end

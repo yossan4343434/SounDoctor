@@ -10,35 +10,52 @@
 
 @implementation SODAudioRecorder
 
-- (void)setup
+- (void)startRecord:(id)sender
 {
-    _session = [AVAudioSession sharedInstance];
-    if ([_session inputIsAvailable]) {
-        [_session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+
+    NSError *error = nil;
+    if ([audioSession inputIsAvailable]) {
+        [audioSession setCategory:AVAudioSessionCategoryRecord error:&error];
+    }
+    if(error){
+        NSLog(@"audioSession: %@ %d %@", [error domain], [error code], [[error userInfo] description]);
+    }
+
+    [audioSession setActive:YES error:&error];
+    if(error){
+        NSLog(@"audioSession: %@ %d %@", [error domain], [error code], [[error userInfo] description]);
     }
     
-    [_session setActive:YES error:nil];
+    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [filePaths objectAtIndex:0];
+    NSString *path = [documentDir stringByAppendingPathComponent:@"rec.caf"];
+    NSURL *recordingURL = [NSURL fileURLWithPath:path];
     
-    _filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-    _documentDir = [_filePaths objectAtIndex:0];
-    _path = [_documentDir stringByAppendingPathComponent:@"rec.caf"];
-    _recordingURL = [NSURL fileURLWithPath:_path];
+    recorder = [[AVAudioRecorder alloc] initWithURL:recordingURL settings:nil error:&error];
+    
+    if(error){
+        NSLog(@"error = %@",error);
+        return;
+    }
+    recorder.delegate=self;
+    [recorder recordForDuration: 5.0];
 }
 
-- (void)startRecord
+- (void)play:(id)sender
 {
-    [self setup];
-    _recorder = [[AVAudioRecorder alloc] initWithURL:_recordingURL settings:nil error:nil];
-    [_recorder recordForDuration:5.0];
-    NSLog(@"starRecord");
-}
-
-- (void)playAudioFile
-{
-    _player = [[AVAudioPlayer alloc] initWithContentsOfURL:_recordingURL error:nil];
-    _player.volume = 1.0;
-    [_player play];
-    NSLog(@"playAudioFile");
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryAmbient error:nil];
+    
+    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [filePaths objectAtIndex:0];
+    NSString *path = [documentDir stringByAppendingPathComponent:@"rec.caf"];
+    NSURL *recordingURL = [NSURL fileURLWithPath:path];
+    
+    player = [[AVAudioPlayer alloc]initWithContentsOfURL:recordingURL error:nil];
+    player.delegate = self;
+    player.volume=1.0;
+    [player play];
 }
 
 @end

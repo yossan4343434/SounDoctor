@@ -45,11 +45,11 @@
     [self presentViewController:tbc animated:YES completion:nil];
 }
 - (IBAction)showDetail:(UIButton *)sender {
-    [self.recorder startRecord];
+    [self.recorder startRecord:(id)sender];
 }
 - (IBAction)callDoctor:(UIButton *)sender
 {
-    [self.recorder playAudioFile];
+    [self.recorder play:(id)sender];
 }
 
 /*
