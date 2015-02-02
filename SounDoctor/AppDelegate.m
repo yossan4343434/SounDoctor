@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "SODTabBarController.h"
+#import "SODDiagnoseViewController.h"
+#import "SODCourseDiagnoseViewController.h"
+#import "SODMainResultViewController.h"
+#import "SODDetailResultViewController.h"
+#import "SODLogViewController.h"
+#import "SODSettingViewController.h"
 
 @interface AppDelegate ()
 

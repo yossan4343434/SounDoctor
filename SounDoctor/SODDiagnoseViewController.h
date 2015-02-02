@@ -10,6 +10,5 @@
 
 @interface SODDiagnoseViewController : UIViewController
 
-
 @end
 

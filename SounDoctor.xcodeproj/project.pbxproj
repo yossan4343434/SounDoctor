@@ -17,6 +17,10 @@
 		ED78CB101A7AFBB000BFD3E8 /* SODLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED78CB0F1A7AFBB000BFD3E8 /* SODLogViewController.m */; };
 		ED78CB131A7B000400BFD3E8 /* SODCourseDiagnoseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED78CB121A7B000400BFD3E8 /* SODCourseDiagnoseViewController.m */; };
 		ED78CB191A7B03F100BFD3E8 /* SODSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED78CB181A7B03F100BFD3E8 /* SODSettingViewController.m */; };
+		ED8F4DB71A7C516900CE3671 /* SODMainResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8F4DB61A7C516900CE3671 /* SODMainResultViewController.m */; };
+		ED8F4DBA1A7C5BFF00CE3671 /* SODDetailResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8F4DB91A7C5BFF00CE3671 /* SODDetailResultViewController.m */; };
+		ED8F4DBD1A7C6D8000CE3671 /* SODTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8F4DBC1A7C6D8000CE3671 /* SODTabBarController.m */; };
+		EDD847581A7DC91C00AA2FC5 /* SODAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD847571A7DC91C00AA2FC5 /* SODAudioRecorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,14 @@
 		ED78CB121A7B000400BFD3E8 /* SODCourseDiagnoseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SODCourseDiagnoseViewController.m; sourceTree = "<group>"; };
 		ED78CB171A7B03F100BFD3E8 /* SODSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SODSettingViewController.h; sourceTree = "<group>"; };
 		ED78CB181A7B03F100BFD3E8 /* SODSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SODSettingViewController.m; sourceTree = "<group>"; };
+		ED8F4DB51A7C516900CE3671 /* SODMainResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SODMainResultViewController.h; sourceTree = "<group>"; };
+		ED8F4DB61A7C516900CE3671 /* SODMainResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SODMainResultViewController.m; sourceTree = "<group>"; };
+		ED8F4DB81A7C5BFF00CE3671 /* SODDetailResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SODDetailResultViewController.h; sourceTree = "<group>"; };
+		ED8F4DB91A7C5BFF00CE3671 /* SODDetailResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SODDetailResultViewController.m; sourceTree = "<group>"; };
+		ED8F4DBB1A7C6D8000CE3671 /* SODTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SODTabBarController.h; sourceTree = "<group>"; };
+		ED8F4DBC1A7C6D8000CE3671 /* SODTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SODTabBarController.m; sourceTree = "<group>"; };
+		EDD847561A7DC91C00AA2FC5 /* SODAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SODAudioRecorder.h; sourceTree = "<group>"; };
+		EDD847571A7DC91C00AA2FC5 /* SODAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SODAudioRecorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +105,22 @@
 				ED40256F1A78C89400E7D4BE /* Main.storyboard */,
 				ED4025691A78C89400E7D4BE /* AppDelegate.h */,
 				ED40256A1A78C89400E7D4BE /* AppDelegate.m */,
+				ED8F4DBB1A7C6D8000CE3671 /* SODTabBarController.h */,
+				ED8F4DBC1A7C6D8000CE3671 /* SODTabBarController.m */,
 				ED40256C1A78C89400E7D4BE /* SODDiagnoseViewController.h */,
 				ED40256D1A78C89400E7D4BE /* SODDiagnoseViewController.m */,
 				ED78CB111A7B000400BFD3E8 /* SODCourseDiagnoseViewController.h */,
 				ED78CB121A7B000400BFD3E8 /* SODCourseDiagnoseViewController.m */,
+				ED8F4DB51A7C516900CE3671 /* SODMainResultViewController.h */,
+				ED8F4DB61A7C516900CE3671 /* SODMainResultViewController.m */,
+				ED8F4DB81A7C5BFF00CE3671 /* SODDetailResultViewController.h */,
+				ED8F4DB91A7C5BFF00CE3671 /* SODDetailResultViewController.m */,
 				ED78CB0E1A7AFBB000BFD3E8 /* SODLogViewController.h */,
 				ED78CB0F1A7AFBB000BFD3E8 /* SODLogViewController.m */,
 				ED78CB171A7B03F100BFD3E8 /* SODSettingViewController.h */,
 				ED78CB181A7B03F100BFD3E8 /* SODSettingViewController.m */,
+				EDD847561A7DC91C00AA2FC5 /* SODAudioRecorder.h */,
+				EDD847571A7DC91C00AA2FC5 /* SODAudioRecorder.m */,
 				ED4025721A78C89400E7D4BE /* Images.xcassets */,
 				ED4025741A78C89400E7D4BE /* LaunchScreen.xib */,
 				ED4025651A78C89400E7D4BE /* Supporting Files */,
@@ -235,7 +255,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED40256E1A78C89400E7D4BE /* SODDiagnoseViewController.m in Sources */,
+				ED8F4DBA1A7C5BFF00CE3671 /* SODDetailResultViewController.m in Sources */,
 				ED78CB131A7B000400BFD3E8 /* SODCourseDiagnoseViewController.m in Sources */,
+				EDD847581A7DC91C00AA2FC5 /* SODAudioRecorder.m in Sources */,
+				ED8F4DB71A7C516900CE3671 /* SODMainResultViewController.m in Sources */,
+				ED8F4DBD1A7C6D8000CE3671 /* SODTabBarController.m in Sources */,
 				ED40256B1A78C89400E7D4BE /* AppDelegate.m in Sources */,
 				ED4025681A78C89400E7D4BE /* main.m in Sources */,
 				ED78CB191A7B03F100BFD3E8 /* SODSettingViewController.m in Sources */,
